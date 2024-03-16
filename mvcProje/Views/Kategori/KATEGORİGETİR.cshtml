@@ -1,0 +1,28 @@
+﻿@model mvcProje.Models.Entity.TBLKATEGORILER
+@{
+    ViewBag.Title = "KATEGORİGETİR";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("GUNCELLE", "Kategori", FormMethod.Post))
+  {
+
+<div class="form-group">
+
+    @Html.LabelFor(m => m.KATEGORIID)
+    @Html.TextBoxFor(m => m.KATEGORIID, new { @class = "form-control" })
+
+
+    <br/>
+
+    @Html.LabelFor(m => m.KATEORIAD)
+    @Html.TextBoxFor(m => m.KATEORIAD, new { @class = "form-control" })
+</div>
+<div>
+    <button class="btn btn-warning">Kategori Güncelle</button>
+</div>
+
+            }
+
+
+

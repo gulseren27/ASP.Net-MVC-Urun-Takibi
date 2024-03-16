@@ -1,0 +1,35 @@
+﻿@using mvcProje.Models.Entity
+@model List<TBLURUNLER>
+@{
+    ViewBag.Title = "IndexUrunler";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Ürünler</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ÜRÜN ID </th>
+            <th>ÜRÜN ADI</th>
+            <th>ÜRÜN KATEGORİ</th>
+            <th>FİYAT</th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var urn in Model)
+        {
+        <tr>
+            <td>@urn.URUNID</td>
+            <td>@urn.URUNAD</td>
+            <td>@urn.TBLKATEGORILER.KATEORIAD</td>
+            <td>@urn.FIYAT</td>
+            <td><a href="/URUN/SIL/@urn.URUNID" class=" btn btn-danger">SİL</a></td>
+            <td><a href="/URUN/GUNCELLE/@urn.URUNAD" class=" btn btn-success">GÜNCELLE</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+<a href="/URUN/YenıUrun" class="btn btn-primary">Yeni Ürün Ekle</a>

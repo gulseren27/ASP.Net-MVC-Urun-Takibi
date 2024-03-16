@@ -1,0 +1,31 @@
+﻿@using mvcProje.Models.Entity
+@model List<TBLKATEGORILER> 
+@{
+    ViewBag.Title = "IndexKategori";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Kategoriler</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>KATEGORİ ID </th>
+            <th>KATEGORİ ADI</th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var ktgr in Model) { 
+        <tr>
+            <td>@ktgr.KATEGORIID</td>
+            <td>@ktgr.KATEORIAD</td>
+            <td><a href="/KATEGORI/SIL/@ktgr.KATEGORIID" class=" btn btn-danger">SİL</a></td>
+            <td><a href="/KATEGORI/KATEGORİGETİR/@ktgr.KATEGORIID" class=" btn btn-success">GÜNCELLE</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/KATEGORI/YENIKATEGORI" class="btn btn-primary">Yeni Kategori Ekle</a>
