@@ -29,7 +29,7 @@ namespace mvcProje.Controllers
         {
             db.TBLMUSTERILER.Add(p1);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("IndexMusteriler");
         }
 
         public ActionResult SIL(int id)
@@ -39,6 +39,20 @@ namespace mvcProje.Controllers
             db.SaveChanges();
             return RedirectToAction("IndexMusteriler");
 
+        }
+        public ActionResult MUSTERİGETİR(int id)
+        {
+            var mus = db.TBLMUSTERILER.Find(id);
+            return View("MUSTERİGETİR", mus);
+        }
+
+           public ActionResult GUNCELLE(TBLMUSTERILER p1)
+        {
+
+            var mus = db.TBLMUSTERILER.Find(p1.MUSTERIID);
+            mus.MUSTERIAD = p1.MUSTERIAD;
+            db.SaveChanges();
+            return RedirectToAction("IndexMusteriler");
 
 
         }

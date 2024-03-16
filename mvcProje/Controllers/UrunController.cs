@@ -30,7 +30,7 @@ namespace mvcProje.Controllers
                                                  Value = i.KATEGORIID.ToString()
                                              }).ToList();
             ViewBag.dgr = degerler;
-            return View();
+            return RedirectToAction("IndexUrunler");
         }
 
         [HttpPost]
