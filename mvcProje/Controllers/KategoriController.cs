@@ -34,6 +34,11 @@ namespace mvcProje.Controllers
 
         public ActionResult YENIKATEGORI(TBLKATEGORILER p1)
         {
+
+            if (!ModelState.IsValid)
+            {
+                return View("YENIKATEGORI");
+            }
             db.TBLKATEGORILER.Add(p1);
             db.SaveChanges();
             return View();
