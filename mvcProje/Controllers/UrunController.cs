@@ -21,7 +21,7 @@ namespace mvcProje.Controllers
 
 
         [HttpGet]
-        public ActionResult YenıUrun()
+        public ActionResult YenıUrun_()
         {
             List<SelectListItem> degerler = (from i in db.TBLKATEGORILER.ToList()
                                              select new SelectListItem
@@ -35,7 +35,7 @@ namespace mvcProje.Controllers
 
         [HttpPost]
 
-        public ActionResult YenıUrun(TBLURUNLER p1)
+        public ActionResult YenıUrun_(TBLURUNLER p1)
         {
             var ktg = db.TBLKATEGORILER.Where(m => m.KATEGORIID == p1.TBLKATEGORILER.KATEGORIID).FirstOrDefault();
             p1.TBLKATEGORILER = ktg;
@@ -55,6 +55,23 @@ namespace mvcProje.Controllers
 
 
 
+        }
+        public ActionResult UrunGetir(int id)
+        {
+            var Urun = db.TBLURUNLER.Find(id);
+            return View("UrunGetir", Urun);
+        }
+
+
+
+        public ActionResult GUNCELLE(TBLURUNLER p1)
+        {
+            var urunn = db.TBLURUNLER.Find(p1.URUNID);
+            urunn.URUNAD = p1.URUNAD;
+            urunn.URUNKATEGORI = p1.URUNKATEGORI;
+            urunn.FIYAT = p1.FIYAT;
+            db.SaveChanges();
+            return RedirectToAction("IndexUrunler");
         }
     }
 }

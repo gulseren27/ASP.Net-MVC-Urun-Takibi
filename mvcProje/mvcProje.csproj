@@ -230,6 +230,8 @@
     <Content Include="Views\Urun\YenıUrun.cshtml" />
     <Content Include="Views\Kategori\KATEGORİGETİR.cshtml" />
     <Content Include="Views\Musteri\MUSTERİGETİR.cshtml" />
+    <Content Include="Views\Urun\YenıUrun_.cshtml" />
+    <Content Include="Views\Urun\UrunGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

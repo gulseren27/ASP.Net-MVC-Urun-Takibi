@@ -23,7 +23,7 @@ namespace mvcProje.Models.Entity
     
         public int KATEGORIID { get; set; }
 
-        [Required(ErrorMessage =" Kategori Adý Giriniz!")]
+        [Required(ErrorMessage =" Kategori Adý Boþ Býrakýlamaz!")]
         public string KATEORIAD { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

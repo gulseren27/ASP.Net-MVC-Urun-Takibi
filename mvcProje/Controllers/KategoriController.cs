@@ -41,7 +41,7 @@ namespace mvcProje.Controllers
             }
             db.TBLKATEGORILER.Add(p1);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("IndexKategori");
             
 }
     
@@ -63,7 +63,7 @@ namespace mvcProje.Controllers
             return View("KATEGORİGETİR", ktgr);
         }
 
-           public ActionResult GUNCELLE(TBLKATEGORILER p1)
+        public ActionResult GUNCELLE(TBLKATEGORILER p1)
         {
 
             var ktg = db.TBLKATEGORILER.Find(p1.KATEGORIID);

@@ -7,22 +7,21 @@
 <h2>YENİ KATEGORİ EKLE</h2>
 
 
-<form>
-
-   
-    <div class="form-group" method="post">
-        @*
-        <label >Kategori Adı Girin:</label>
-        <input class="form-control" type="text" placeholder="Kategori Adı" name="KATEGORIAD">
-        *@
-    </div>
-
-    <div>
-        <label>Kategori Adı Girin:</label>
-        @Html.TextBoxFor(m=>m.KATEORIAD, new {@class= "form-control"})
-        @Html.ValidationMessageFor(m=>m.KATEORIAD, " ", new {@style="color:red"})
-    </div>
 
 
-    <button class="btn btn-info">Kategori Ekle</button>
+
+    <form class="form-group" method="post">
+        <div>
+            <label>Kategori Adı Girin:</label>
+            @Html.TextBoxFor(m => m.KATEORIAD, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.KATEORIAD, " ", new { @style = "color:red" })
+        </div>
+
+
+        <div style="margin-top:10px">
+            <button class="btn btn-info">Kategori Ekle</button>
+ 
+         </div>
+
+
 </form>
