@@ -173,8 +173,8 @@ C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\bin\tr\System.We
 C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\bin\tr\System.Web.WebPages.resources.dll
 C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\bin\tr\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\bin\tr\System.Web.WebPages.Razor.resources.dll
-C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\obj\Debug\mvcProje.csproj.AssemblyReference.cache
 C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\obj\Debug\mvcProje.csproj.CoreCompileInputs.cache
 C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\obj\Debug\mvcProje.csproj.CopyComplete
 C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\obj\Debug\mvcProje.dll
 C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\obj\Debug\mvcProje.pdb
+C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\obj\Debug\mvcProje.csproj.AssemblyReference.cache

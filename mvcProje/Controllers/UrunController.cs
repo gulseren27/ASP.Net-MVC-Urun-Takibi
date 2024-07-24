@@ -59,6 +59,14 @@ namespace mvcProje.Controllers
         public ActionResult UrunGetir(int id)
         {
             var Urun = db.TBLURUNLER.Find(id);
+
+            List<SelectListItem> degerler = (from i in db.TBLKATEGORILER.ToList()
+                                             select new SelectListItem
+                                             {
+                                                 Text = i.KATEORIAD,
+                                                 Value = i.KATEGORIID.ToString()
+                                             }).ToList();
+            ViewBag.dgr = degerler;
             return View("UrunGetir", Urun);
         }
 
@@ -68,7 +76,8 @@ namespace mvcProje.Controllers
         {
             var urunn = db.TBLURUNLER.Find(p1.URUNID);
             urunn.URUNAD = p1.URUNAD;
-            urunn.URUNKATEGORI = p1.URUNKATEGORI;
+            var ktg = db.TBLKATEGORILER.Where(m => m.KATEGORIID == p1.TBLKATEGORILER.KATEGORIID).FirstOrDefault();
+            urunn.URUNKATEGORI = p1.TBLKATEGORILER.KATEGORIID;
             urunn.FIYAT = p1.FIYAT;
             db.SaveChanges();
             return RedirectToAction("IndexUrunler");

@@ -24,8 +24,10 @@ namespace mvcProje.Models.Entity
         
         public int MUSTERIID { get; set; }
         [Required(ErrorMessage = " Bu alaný boþ býrakamazsýnýz")]
-        //[StringLength(50,ErrorMessage ="En fazla 50 karakter kullanabilirsiniz")]
+        [StringLength(50,ErrorMessage ="En fazla 50 karakter kullanabilirsiniz")]
         public string MUSTERIAD { get; set; }
+        [Required(ErrorMessage = " Bu alaný boþ býrakamazsýnýz")]
+        [StringLength(50, ErrorMessage = "En fazla 50 karakter kullanabilirsiniz")]
         public string MUSTERISOYAD { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

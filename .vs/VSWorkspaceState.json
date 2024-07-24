@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\mvcProje",
+    "\\mvcProje\\Controllers",
+    "\\mvcProje\\Models",
+    "\\mvcProje\\Models\\Entity",
     "\\mvcProje\\Views",
-    "\\mvcProje\\Views\\Kategori"
+    "\\mvcProje\\Views\\Kategori",
+    "\\mvcProje\\Views\\Shared"
   ],
-  "SelectedNode": "\\mvcProje\\Views\\Kategori\\KATEGORİGETİR.cshtml",
+  "SelectedNode": "\\mvcProje\\Models\\Entity\\TBLMUSTERILER.cs",
   "PreviewInSolutionExplorer": false
 }

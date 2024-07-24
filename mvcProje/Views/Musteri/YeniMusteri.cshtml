@@ -1,4 +1,4 @@
-﻿
+﻿@model mvcProje.Models.Entity.TBLMUSTERILER
 @{
     ViewBag.Title = "YeniMusteri";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -9,15 +9,16 @@
 <form class="form-group" method="post">
 
 
-    <div >
+    <div>
         <label>Müşteri Adı Girin:</label>
-        <input class="form-control" type="text" placeholder="Müşteri Adı" name="MUSTERIAD">
-
+        @Html.TextBoxFor(m => m.MUSTERIAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MUSTERIAD, " ", new { @style = "color:red" })
     </div>
 
     <div>
         <label>Müşteri Soyadı Girin:</label>
-        <input class="form-control" type="text" placeholder="Müşteri Soyadı" name="MUSTERISOYAD">
+        @Html.TextBoxFor(m => m.MUSTERISOYAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MUSTERISOYAD, " ", new { @style = "color:red" })
 
     </div>
     <div style="margin-top:15px">

@@ -1,5 +1,6 @@
 ﻿@using mvcProje.Models.Entity
 @model List<TBLURUNLER>
+
 @{
     ViewBag.Title = "IndexUrunler";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -27,9 +28,9 @@
             <td>@urn.TBLKATEGORILER.KATEORIAD</td>
             <td>@urn.FIYAT</td>
             <td><a href="/URUN/SIL/@urn.URUNID" class=" btn btn-danger">SİL</a></td>
-            <td><a href="/URUN/UrunGetir/@urn.URUNAD" class=" btn btn-success">GÜNCELLE</a></td>
+            <td><a href="/URUN/UrunGetir/@urn.URUNID" class=" btn btn-success">GÜNCELLE</a></td>
         </tr>
         }
     </tbody>
 </table>
-<a href="/Urun/YenıUrun_" class="btn btn-primary">Yeni Ürün Ekle</a>
+<a href="/URUN/YenıUrun_" class="btn btn-primary">Yeni Ürün Ekle</a>
