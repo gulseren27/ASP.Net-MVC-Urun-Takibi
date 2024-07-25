@@ -1,5 +1,8 @@
 ﻿@using mvcProje.Models.Entity
-@model List<TBLURUNLER>
+@using PagedList;
+@using PagedList.Mvc;
+
+@model PagedList.IPagedList<TBLURUNLER>
 
 @{
     ViewBag.Title = "IndexUrunler";
@@ -17,6 +20,7 @@
             <th>FİYAT</th>
             <th>SİL</th>
             <th>GÜNCELLE</th>
+            <th>ALERT</th>
         </tr>
     </thead>
     <tbody>
@@ -29,8 +33,12 @@
             <td>@urn.FIYAT</td>
             <td><a href="/URUN/SIL/@urn.URUNID" class=" btn btn-danger">SİL</a></td>
             <td><a href="/URUN/UrunGetir/@urn.URUNID" class=" btn btn-success">GÜNCELLE</a></td>
+            <td>@Html.ActionLink("SİL BUTONU", "SİL", new { id = urn.URUNID }, new { @class = "btn btn-warning", onclick = "return confirm('Silmek İstediğinizden Emin Misiniz?')" })</td>
+
         </tr>
         }
     </tbody>
 </table>
+
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("IndexUrunler",new {sayfa}))
 <a href="/URUN/YenıUrun_" class="btn btn-primary">Yeni Ürün Ekle</a>

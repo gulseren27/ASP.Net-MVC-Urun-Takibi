@@ -178,3 +178,7 @@ C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\obj\Debug\mvcPro
 C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\obj\Debug\mvcProje.dll
 C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\obj\Debug\mvcProje.pdb
 C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\obj\Debug\mvcProje.csproj.AssemblyReference.cache
+C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\bin\PagedList.dll
+C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\bin\PagedList.Mvc.dll
+C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\bin\PagedList.xml
+C:\Users\Gulseren\Source\Repos\ASP.Net-MVC-Urun-Takibi\mvcProje\bin\PagedList.Mvc.xml

@@ -12,7 +12,7 @@
 
     <div>
         <label>Ürün Adı :</label>
-        <input class="form-control" type="text" placeholder="Ürün Adı" name="URUNAD">
+        <input class="form-control" type="text" placeholder="Ürün Adı" name="URUNAD" required="">
 
     </div>
 
@@ -23,12 +23,17 @@
 
     <div>
         <label>Ürün Fiyatı :</label>
-        <input class="form-control" type="text" placeholder="Ürün Fiyatı" name="FIYAT">
+        <input class="form-control" type="text" placeholder="Ürün Fiyatı" name="FIYAT" required="">
 
     </div>
 
     <div style="margin-top:15px">
-        <button class="btn btn-info">Ürün Ekle</button>
+        <button class="btn btn-info" id="btn3">Ürün Ekle</button>
     </div>
+    <script>
+        $('#btn3').click(function () {
+            alert('Ürün Eklendi');
+        });
+    </script>
 </form>
 

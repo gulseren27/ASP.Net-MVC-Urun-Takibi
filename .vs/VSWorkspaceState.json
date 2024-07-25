@@ -7,8 +7,9 @@
     "\\mvcProje\\Models\\Entity",
     "\\mvcProje\\Views",
     "\\mvcProje\\Views\\Kategori",
-    "\\mvcProje\\Views\\Shared"
+    "\\mvcProje\\Views\\Shared",
+    "\\mvcProje\\Views\\Urun"
   ],
-  "SelectedNode": "\\mvcProje\\Models\\Entity\\TBLMUSTERILER.cs",
+  "SelectedNode": "\\mvcProje\\Views\\Urun\\IndexUrunler.cshtml",
   "PreviewInSolutionExplorer": false
 }

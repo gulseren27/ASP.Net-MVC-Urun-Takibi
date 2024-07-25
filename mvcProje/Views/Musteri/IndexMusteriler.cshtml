@@ -1,5 +1,7 @@
 ﻿@using mvcProje.Models.Entity
-@model List<TBLMUSTERILER>
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<TBLMUSTERILER>
 
 @{
     ViewBag.Title = "IndexMusteriler";
@@ -16,19 +18,23 @@
             <th>MÜŞTERİ SOYADI</th>
             <th>SİL</th>
             <th>GÜNCELLE</th>
+            <th>ALERT</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var mus in Model)
         {
-        <tr>
-            <td>@mus.MUSTERIID</td>
-            <td>@mus.MUSTERIAD</td>
-            <td>@mus.MUSTERISOYAD</td>
-            <td><a href="/MUSTERI/SIL/@mus.MUSTERIID" class=" btn btn-danger">SİL</a></td>
-            <td><a href="/MUSTERI/MUSTERİGETİR/@mus.MUSTERIID" class=" btn btn-success">GÜNCELLE</a></td>
-        </tr>
+            <tr>
+                <td>@mus.MUSTERIID</td>
+                <td>@mus.MUSTERIAD</td>
+                <td>@mus.MUSTERISOYAD</td>
+                <td><a href="/MUSTERI/SIL/@mus.MUSTERIID" class=" btn btn-danger">SİL</a></td>
+                <td><a href="/MUSTERI/MUSTERİGETİR/@mus.MUSTERIID" class=" btn btn-success">GÜNCELLE</a></td>
+                <td>@Html.ActionLink("SİL BUTONU","SİL",new { id = mus.MUSTERIID },new { @class = "btn btn-warning", onclick = "return confirm('Silmek İstediğinizden Emin Misiniz?')"})</td>
+            </tr>
         }
     </tbody>
 </table>
+
+@Html.PagedListPager((IPagedList)Model ,sayfa => Url.Action("IndexMusteriler",new { sayfa }))
 <a href="/MUSTERI/YeniMusteri" class="btn btn-primary">Yeni Müşteri Ekle</a>

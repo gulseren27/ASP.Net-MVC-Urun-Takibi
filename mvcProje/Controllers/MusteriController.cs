@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 using mvcProje.Models.Entity;
 namespace mvcProje.Controllers
 {
@@ -11,9 +13,9 @@ namespace mvcProje.Controllers
 
         MvcProjectEntities db = new MvcProjectEntities();
         // GET: Musteri
-        public ActionResult IndexMusteriler()
+        public ActionResult IndexMusteriler(int sayfa = 1)
         {
-            var degerler = db.TBLMUSTERILER.ToList();
+            var degerler = db.TBLMUSTERILER.ToList().ToPagedList(sayfa,10);
 
             return View(degerler);
         }

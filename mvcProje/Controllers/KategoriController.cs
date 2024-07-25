@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using PagedList;
+using PagedList.Mvc;
 using System.Web.Mvc;
 using mvcProje.Models.Entity;
 
@@ -16,10 +18,11 @@ namespace mvcProje.Controllers
 
 
         
-        public ActionResult IndexKategori()
+        public ActionResult IndexKategori(int sayfa = 1)
         {
 
-            var degerler = db.TBLKATEGORILER.ToList();
+            //var degerler = db.TBLKATEGORILER.ToList();
+            var degerler = db.TBLKATEGORILER.ToList().ToPagedList(sayfa,10);
 
             return View(degerler);
         }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using mvcProje.Models.Entity;
+using PagedList;
+using PagedList.Mvc;
 namespace mvcProje.Controllers
 {
     public class UrunController : Controller
@@ -11,10 +13,10 @@ namespace mvcProje.Controllers
 
         MvcProjectEntities db = new MvcProjectEntities();
         // GET: Urun
-        public ActionResult IndexUrunler()
+        public ActionResult IndexUrunler(int sayfa = 1)
         {
 
-            var degerler = db.TBLURUNLER.ToList();
+            var degerler = db.TBLURUNLER.ToList().ToPagedList(sayfa,10);
 
             return View(degerler);
         }
@@ -30,7 +32,7 @@ namespace mvcProje.Controllers
                                                  Value = i.KATEGORIID.ToString()
                                              }).ToList();
             ViewBag.dgr = degerler;
-            return RedirectToAction("IndexUrunler");
+            return View();
         }
 
         [HttpPost]
