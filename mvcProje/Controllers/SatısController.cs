@@ -18,9 +18,7 @@ namespace mvcProje.Controllers
         {
 
 
-            var degerler = db.TBLSATISLAR.ToList();
-
-            return View(degerler);
+            return View();
         }
 
         [HttpGet]

@@ -1,7 +1,5 @@
 ﻿@using mvcProje.Models.Entity
-@using PagedList;
-@using PagedList.Mvc;
-@model PagedList.IPagedList<TBLMUSTERILER>
+@model List<TBLMUSTERILER>
 
 @{
     ViewBag.Title = "IndexMusteriler";
@@ -9,6 +7,12 @@
 }
 
 <h2>Müşteriler</h2>
+
+@using (Html.BeginForm("IndexMusteriler", "Musteri", FormMethod.Get))
+{
+    @Html.TextBox("p")
+    <input type="submit" value="Ara" />
+}
 
 <table class="table table-striped">
     <thead>
@@ -30,11 +34,10 @@
                 <td>@mus.MUSTERISOYAD</td>
                 <td><a href="/MUSTERI/SIL/@mus.MUSTERIID" class=" btn btn-danger">SİL</a></td>
                 <td><a href="/MUSTERI/MUSTERİGETİR/@mus.MUSTERIID" class=" btn btn-success">GÜNCELLE</a></td>
-                <td>@Html.ActionLink("SİL BUTONU","SİL",new { id = mus.MUSTERIID },new { @class = "btn btn-warning", onclick = "return confirm('Silmek İstediğinizden Emin Misiniz?')"})</td>
+                <td>@Html.ActionLink("SİL BUTONU", "SİL", new { id = mus.MUSTERIID }, new { @class = "btn btn-warning", onclick = "return confirm('Silmek İstediğinizden Emin Misiniz?')" })</td>
             </tr>
         }
     </tbody>
 </table>
 
-@Html.PagedListPager((IPagedList)Model ,sayfa => Url.Action("IndexMusteriler",new { sayfa }))
 <a href="/MUSTERI/YeniMusteri" class="btn btn-primary">Yeni Müşteri Ekle</a>

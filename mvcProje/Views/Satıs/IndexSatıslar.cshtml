@@ -1,5 +1,6 @@
-﻿@model mvcProje.Models.Entity.TBLSATISLAR
-    @{
+﻿
+@model mvcProje.Models.Entity.TBLSATISLAR
+@{
     ViewBag.Title = "IndexSatıslar";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
@@ -27,7 +28,9 @@
 
 
 
-                        <button style="margin-top:10px" class="btn btn-info">Satış İşlemini Yap</button>
+                        <button type="submit" style="margin-top:10px" class="btn btn-info">Satış İşlemini Yap</button>
+                        <button type="button" style="margin-top:10px" class="btn btn-danger" data-dismiss="modal">İptal Et</button>
+
 
                     </div>
                     @*<button class="btn btn-info">Verileri Kaydet</button>*@

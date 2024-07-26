@@ -4,8 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using mvcProje.Models.Entity;
-using PagedList;
-using PagedList.Mvc;
 namespace mvcProje.Controllers
 {
     public class UrunController : Controller
@@ -13,10 +11,10 @@ namespace mvcProje.Controllers
 
         MvcProjectEntities db = new MvcProjectEntities();
         // GET: Urun
-        public ActionResult IndexUrunler(int sayfa = 1)
+        public ActionResult IndexUrunler()
         {
 
-            var degerler = db.TBLURUNLER.ToList().ToPagedList(sayfa,10);
+            var degerler = db.TBLURUNLER.ToList();
 
             return View(degerler);
         }

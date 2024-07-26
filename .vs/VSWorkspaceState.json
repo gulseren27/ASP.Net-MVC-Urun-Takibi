@@ -10,6 +10,6 @@
     "\\mvcProje\\Views\\Shared",
     "\\mvcProje\\Views\\Urun"
   ],
-  "SelectedNode": "\\mvcProje\\Views\\Urun\\IndexUrunler.cshtml",
+  "SelectedNode": "\\mvcProje\\Controllers\\KategoriController.cs",
   "PreviewInSolutionExplorer": false
 }
